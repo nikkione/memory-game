@@ -1,6 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // cards array
+  
+  const images = new Array();
 
+  function preloadImages(...images) {
+    images.forEach((image, i) => {
+      image = new Image();
+      image.src = preloadImages.arguments[i];
+    });
+  }
+
+  // Предварительная загрузка нужных картинок
+  preloadImages(
+    "img/frog_one.jpeg",
+    "img/frog_two.jpeg",
+    "img/frog_three.jpeg",
+    "img/frog_four.jpeg",
+    "img/frog_five.jpeg",
+    "img/frog_six.jpeg"
+  );
+  
+  // cards array
   const cardArray = [
     {
       name: "one",
