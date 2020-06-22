@@ -16,3 +16,6 @@ img {
 img:hover {
   cursor: pointer;
 }
+button {
+  margin-top: 50px;
+}
